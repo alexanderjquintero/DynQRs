@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <style>
-      body {
-        color de fondo: azul claro;
-        texto-alinear: centro;
+<html lang="es">
+<cabeza>
+  <meta juego de caracteres="utf-8">
+  <título></título>
+  <estilo>
+ cuerpo {
+ color de fondo: azul claro;
+ texto-alinear : centro;
       }
       
  .lds-ring {
-  mostrar: bloque en línea;
+  Mostrar: bloque en Línea;
   posición: relativo;
-  ancho: 80))px;
-  altura: 80))px;
+  ancho: 80))))px;
+  altura: 80))))px;
 }
-. .lds-ring div {
-  dimensionamiento de cajas: caja de borde;
-  mostrar: bloquear;
-  posición: absoluto;
-  ancho: 64)))px;
-  altura: 64)))px;
-  margen: 8px;
-  frontera: 8px sólido #fff ;
-  radio fronterizo: 50))%;
-  animación: lds-ring 1.2s bezier cúbico(0.5, 0, 0.5, 1) infinito;
-  color de borde: #fff transparenteee transparenteee transparenteee;
+.  .lds-ring div. {
+ dimensionamiento de cajas : caja de borde ;
+ mostrar : bloquear;
+ posición : absoluto;
+ ancho: 64)))px;
+ Altura: 64)))px;
+ margen: 8px;
+ frontera: 8px sólido #fff ;
+ radio fronterizo: 50))%;
+  animación: lds-ring 1.2s bezier cúbico(0.5, 0, 0.5, 1) infinito ;
+ color de borde: #fff transparenteee transparente transparenteeeee transparente ;
 }
-. .lds-ring div :enésimo niño(1) {
-  retraso de animación: -0,45s;
+ .lds-ring div :.enésimo niño(1) {
+ retroceso de animación: -0,45s ;
 }
-. . .lds-ring div :enésimo niño(2) {
-  retraso de animación: -0.3s;
+ .lds-ring div :. .enésimo niño(2) {
+ retroceso de animación: -0.3s ;
 }
-. . . .lds-ring div :enésimo niño(3) {
-  retraso de animación: -0.15s;
+ .lds-ring div :. . .enésimo niño(3) {
+ retroceso de animación: -0.15s ;
 }
 @keyframes lds-ring {
-  0% {
-    transformarar: rotar(0reg);
+ 0% {
+ transformarar: rotar (0reg) ;
   }
-  100% {
-    transformarar: rotar(360reg);
+ 100% {
+ transformarar: rotar (360reg);
   }
 }
 
@@ -49,13 +49,13 @@
 </cabeza>
 <cuerpo>
   <guión>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbx1eeforbqu4FPijHq0TSJ9XSxgu6Hex-3eoO-6rVwqERI22CeoE6iV7DLSM_e92P94Ig / exec";
+ const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxijf2D6Wb4idLbaGFug3PJ-a6L_NKJ9p4TGK_JGqump9qm4ZYjb0oD5k2_MuGkQbw1xg/
     
-    var url = documento.ubicación.href;
-    var k = url.substr(url.lastIndexOf("k =")+2);
+ var url = documento.ubicación.href ;
+ var k = url.substr (url.lastIndexOf ("k =") + 2) ;
     
-    si(k){
-      buscar(AS_URL_BASE +'?k = '+ k)
+ si (k) {
+ buscar (AS_URL_BASE + '?k = '+ k)
       .entonces(r => r.texto())
       .entonces((r) => {
  consola.log(r);
