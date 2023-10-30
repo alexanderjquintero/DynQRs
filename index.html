@@ -15,62 +15,62 @@
   width: 80px;
   height: 80px;
 }
-. .lds-ring div {
-  dimensionamiento de cajas: caja de borde;
-  mostrar: bloquear;
-  posición: absoluto;
-  ancho: 64)))px;
-  altura: 64)))px;
-  margen: 8px;
-  frontera: 8px sólido #fff ;
-  radio fronterizo: 50))%;
-  animación: lds-ring 1.2s bezier cúbico(0.5, 0, 0.5, 1) infinito;
-  color de borde: #fff transparenteee transparenteee transparenteee;
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
 }
-.lds-ring div:enésimo niño(1) {
-  retraso de animación: -0,45s;
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
 }
-.lds-ring div:enésimo niño(2) {
-  retraso de animación: -0.3s;
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
 }
-.lds-ring div:enésimo niño(3) {
-  retraso de animación: -0.15s;
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
 }
 @keyframes lds-ring {
   0% {
-    transformarar: rotar(0reg);
+    transform: rotate(0deg);
   }
   100% {
-    transformarar: rotar(360reg);
+    transform: rotate(360deg);
   }
 }
 
-  </estilo>
-</cabeza>
-<cuerpo>
-  <guión>
+  </style>
+</head>
+<body>
+  <script>
     const AS_URL_BASE = "https://script.google.com/a/~/macros/s/AKfycbxijf2D6Wb4idLbAGFug3PJ-a6L_NKJ9p4TGK_JGqump9qm4ZYjb0oD5k2_MuGkQbw1xg/exec";
     
-    var url = documento.ubicación.href;
-    var k = url.substr(url.lastIndexOf("k =")+2);
+    var url = document.location.href;
+    var k = url.substr(url.lastIndexOf("k=")+2);
     
-    si(k){
-      buscar(AS_URL_BASE +'?k = '+ k)
-      .entonces(r => r.texto())
-      .entonces((r) => {
-        console.(r);
-        //document.write (r) ;
-        si(r){
-          document.(r);
+    if(k){
+      fetch(AS_URL_BASE+'?k='+k)
+      .then(r => r.text())
+      .then((r) => {
+        console.log(r);
+        //document.write(r);
+        if(r){
+          document.location.replace(r);
         }
       })
-      .atrapar(err => consola.log(err))
+      .catch(err => console.log(err))
     }
 
-  </guión>
+  </script>
   
-  <div clase="anillo de lds"><div ></div ><div ></div ><div ></div ><div ></div ></div >
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
   
   
-</cuerpo>
-  </html>
+</body>
+</html>
